@@ -234,10 +234,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lnJ-Hu-43u">
-                                <rect key="frame" x="20" y="147" width="560" height="328"/>
+                                <rect key="frame" x="20" y="95" width="560" height="412"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" borderStyle="roundedRect" placeholder="BOTTOM" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="0Ul-ac-c8H">
-                                <rect key="frame" x="20" y="483" width="560" height="30"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mHo-Jr-UHT">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="action" id="tmL-kg-syZ">
+                                        <connections>
+                                            <action selector="share:" destination="Nyn-6l-aEB" id="YRb-Ch-kZv"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Iqy-qW-SBG"/>
+                                    <barButtonItem title="Cancel" id="vu6-fs-BDu">
+                                        <connections>
+                                            <action selector="cancel:" destination="Nyn-6l-aEB" id="CAq-Hp-FCV"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" placeholder="TOP" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="rPX-aC-6eO">
+                                <rect key="frame" x="20" y="61" width="560" height="26"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" placeholder="BOTTOM" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="0Ul-ac-c8H">
+                                <rect key="frame" x="20" y="515" width="560" height="26"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
@@ -261,40 +284,17 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="D5G-7G-ecR"/>
                                 </items>
                             </toolbar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" borderStyle="roundedRect" placeholder="TOP" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="rPX-aC-6eO">
-                                <rect key="frame" x="20" y="109" width="560" height="30"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
-                            </textField>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mHo-Jr-UHT">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                <items>
-                                    <barButtonItem systemItem="action" id="tmL-kg-syZ">
-                                        <connections>
-                                            <action selector="share:" destination="Nyn-6l-aEB" id="YRb-Ch-kZv"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Iqy-qW-SBG"/>
-                                    <barButtonItem title="Cancel" id="vu6-fs-BDu">
-                                        <connections>
-                                            <action selector="cancel:" destination="Nyn-6l-aEB" id="CAq-Hp-FCV"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="icf-vN-R7D" firstAttribute="top" secondItem="0Ul-ac-c8H" secondAttribute="bottom" constant="43" id="A9y-yE-ChD"/>
+                            <constraint firstItem="icf-vN-R7D" firstAttribute="top" secondItem="0Ul-ac-c8H" secondAttribute="bottom" constant="15" id="A9y-yE-ChD"/>
                             <constraint firstItem="mHo-Jr-UHT" firstAttribute="trailing" secondItem="icf-vN-R7D" secondAttribute="trailing" id="BfA-um-TPv"/>
                             <constraint firstItem="hhi-IJ-fTJ" firstAttribute="top" secondItem="icf-vN-R7D" secondAttribute="bottom" id="FA3-rD-r6s"/>
                             <constraint firstAttribute="trailingMargin" secondItem="icf-vN-R7D" secondAttribute="trailing" constant="-20" id="JEP-Vr-gZf"/>
                             <constraint firstItem="mHo-Jr-UHT" firstAttribute="top" secondItem="gJe-Oe-Zaq" secondAttribute="bottom" id="REU-P4-lyl"/>
                             <constraint firstItem="lnJ-Hu-43u" firstAttribute="leading" secondItem="kiC-3d-Fj8" secondAttribute="leadingMargin" id="RNB-SN-cKb"/>
                             <constraint firstItem="rPX-aC-6eO" firstAttribute="leading" secondItem="kiC-3d-Fj8" secondAttribute="leadingMargin" id="RYX-pA-qHR"/>
-                            <constraint firstItem="rPX-aC-6eO" firstAttribute="top" secondItem="gJe-Oe-Zaq" secondAttribute="bottom" constant="109" id="Urj-hq-tPz"/>
+                            <constraint firstItem="rPX-aC-6eO" firstAttribute="top" secondItem="gJe-Oe-Zaq" secondAttribute="bottom" constant="61" id="Urj-hq-tPz"/>
                             <constraint firstItem="lnJ-Hu-43u" firstAttribute="top" secondItem="rPX-aC-6eO" secondAttribute="bottom" constant="8" id="ZkH-w2-Rmq"/>
                             <constraint firstItem="rPX-aC-6eO" firstAttribute="leading" secondItem="0Ul-ac-c8H" secondAttribute="leading" id="dfj-bo-Dib"/>
                             <constraint firstItem="rPX-aC-6eO" firstAttribute="trailing" secondItem="0Ul-ac-c8H" secondAttribute="trailing" id="f6e-yc-ddI"/>

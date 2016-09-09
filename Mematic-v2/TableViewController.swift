@@ -74,7 +74,7 @@ extension TableViewController: UITableViewDataSource {
         let item = items()[indexPath.row]
 
         cell.textLabel?.textAlignment = .Center
-        cell.textLabel!.text = item.text
+        cell.textLabel!.text = "\(item.topText) \(item.bottomtext)"
 
         cell.imageView!.image = item.memedImage
 

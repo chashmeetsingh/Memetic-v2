@@ -165,7 +165,9 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
 
     // Clears text field
     func textFieldDidBeginEditing(textField: UITextField) {
-        textField.text = ""
+        if textField.text == "TOP" || textField.text == "BOTTOM" {
+            textField.text = ""
+        }
     }
 
     // Generates meme image
@@ -207,12 +209,13 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
 
     // Share options
     func share() {
-        let memedImage = "My image"
+        let memedImage = generateMemedImage()
         let activityViewController : UIActivityViewController = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
 
         activityViewController.completionWithItemsHandler = {(activity, completed, items, error) in
             if (completed) {
                 self.saveImageToPhotoLibrary()
+                self.dismiss()
             }
             else {
                 print(error)
@@ -226,7 +229,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     func saveImageToPhotoLibrary() {
         
         //Create the meme
-        let meme = Meme( text: "\(self.topTextView.text!) \(self.bottomTextView.text!)", originalImage:
+        let meme = Meme( topText: self.topTextView.text!, bottomtext: self.bottomTextView.text!, originalImage:
             memeImageView.image, memedImage: self.generateMemedImage())
 
         // Call to save image to photo Library
